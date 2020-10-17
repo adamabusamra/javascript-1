@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<head> 
+    <title>#Exercise3</title> 
+    <style>
+        .image-container{
+            width: 300px;
+            height: 200px;
+            border: black 1px solid;
+        }
+        .image-container img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head> 
+<body>  
+<select id="flags">
+    <option value=""disabled selected hidden>Select</option>
+    <option value="images/Jordan_Image.png">Jordan</option>
+    <option value="images/Algeria_Image.png">Algeria</option>
+    <option value="images/SouthAfrica_Image.png">South Africa</option>
+</select>
+<div class="image-container"><img id="image" src="images/Null_Image.png"/></div>
+
+    <script>
+
+var changeFlagImage = function () { 
+    document.getElementById('image').src =this.value
+}
+
+var flagList = document.getElementById('flags');
+document.getElementById("flags").onchange = changeFlagImage;
+    </script>
+</body> 
+  
+</html>    

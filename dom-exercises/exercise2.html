@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Exercise #2: Changing colors</title>
     <style>
-        #mydiv {
-            width: 200px;
-            height: 200px;
-            border: 1px solid black;
-        }
+      #mydiv {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
     </style>
+  </head>
+  <body>
+    <div id="mydiv"></div>
+
     <script>
-        /* TODO: write JS code here */
+      // div.onclick = function () {
+      //   color = colors.shift();
+      //   colors.push(color);
+      //   div.style.backgroundColor = color;
+      // };
+      document.getElementById("mydiv").style.background = "blue";
+      let div = document.getElementById("mydiv");
+      let colors = ["red", "green", "blue"];
+      div.addEventListener("click", clickEvent);
+      let i = 0;
+      function clickEvent() {
+        div.style.backgroundColor = colors[i];
+        //i=(i+1)%colors.length
+        i++;
+
+        if (i == 3) {
+          i = 0;
+        }
+      }
     </script>
-</head>
-<body>
-<div id="mydiv"></div>
-</body>
+  </body>
 </html>
