@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" name="radio" class="city" value="any" />
+    <label id="amman1" for="amman">Amman</label><br />
+    <input type="radio" name="radio" class="city" value="any" />
+    <label class="rest" for="rest">Newyork</label><br />
+    <input type="radio" name="radio" class="city" value="any" />
+    <label class="rest" for="rest">Irbid</label><br />
+    <input type="radio" name="radio" class="city" value="any" />
+    <label class="rest" for="rest">Istunbul</label><br />
+    <button>Result</button>
+
+    <script>
+      $("button").click(function () {
+        if ($("input").is(":checked")) {
+          $(".rest").css("color", "green");
+          $("#amman1").css("color", "red");
+        }
+      });
+      //   $("input").click(function () {
+      //     $(".rest").css("color", "green");
+      //     $("#amman1").css("color", "red");
+      //   });
+    </script>
+  </body>
+</html>
